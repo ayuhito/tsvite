@@ -1,0 +1,43 @@
+{
+  /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+  "include": ["src/**/*.ts", "src/**/*.json"],
+  "compilerOptions": {
+    /* Projects */
+    "incremental": true,
+
+    /* Language and Environment */
+    // Node 12.9.0 or newer
+    "target": "es2019",
+    "lib": ["es2020"],
+    "useDefineForClassFields": true,
+
+    /* Modules */
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+
+    /* Emit */
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./types",
+
+    /* Interop Constraints */
+    //"isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Completeness */
+    "skipLibCheck": true // Skip type checking all .d.ts files.
+  },
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "$schema": "https://json.schemastore.org/tsconfig"
+}

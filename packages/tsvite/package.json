@@ -1,0 +1,48 @@
+{
+  "name": "tsvite",
+  "version": "0.1.0",
+  "description": "A zero-config build tool for bootstrapping TypeScript libraries and CLIs.",
+  "main": "dist/index.cjs.js",
+  "bin": {
+    "tsvite": "dist/index.es.mjs"
+  },
+  "module": "dist/index.es.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.mjs",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0 || >=18.0.0"
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "prestart": "vite build",
+    "start": "node dist/tsvite.es.mjs"
+  },
+  "dependencies": {
+    "cac": "^6.7.12",
+    "enquirer": "^2.3.6",
+    "inquirer": "^8.2.2",
+    "picocolors": "^1.0.0",
+    "prompts": "^2.4.2",
+    "vite-node": "^0.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.25",
+    "@types/prompts": "^2.0.14",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.5"
+  },
+  "peerDependencies": {
+    "vite": "2.x"
+  },
+  "license": "MIT"
+}

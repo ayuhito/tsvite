@@ -1,0 +1,23 @@
+{
+  "name": "tsvite-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A zero-config build tool for bootstrapping TypeScript libraries and CLIs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "coverage": "vitest run --coverage"
+  },
+  "repository": "https://github.com/DecliningLotus/tsvite.git",
+  "author": "Lotus <declininglotus@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@changesets/changelog-github": "^0.4.4",
+    "@changesets/cli": "^2.22.0",
+    "vitest": "^0.9.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
