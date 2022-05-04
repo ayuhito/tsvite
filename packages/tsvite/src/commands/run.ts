@@ -1,7 +1,7 @@
 import pc from "picocolors";
 import { createServer } from "vite";
-import { ViteNodeServer } from "vite-node/server";
 import { ViteNodeRunner } from "vite-node/client";
+import { ViteNodeServer } from "vite-node/server";
 
 export interface CliOptions {
   files?: string[];
@@ -45,7 +45,7 @@ export const run = async (options: CliOptions = {}) => {
     console.log(pc.dim(`[${eventName}] ${path}`));
 
     // invalidate module cache but not node_modules
-    Array.from(runner.moduleCache.keys()).forEach((i) => {
+    [...runner.moduleCache.keys()].forEach((i) => {
       if (!i.includes("node_modules")) runner.moduleCache.delete(i);
     });
 

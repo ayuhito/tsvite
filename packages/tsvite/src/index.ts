@@ -1,8 +1,7 @@
 import cac from "cac";
 
-import commands from "./commands";
-
 import { version } from "../package.json";
+import commands from "./commands";
 
 const cli = cac("tsvite");
 

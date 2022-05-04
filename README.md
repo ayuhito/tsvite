@@ -1,4 +1,4 @@
-# tsvite
+# tsvite - WIP
 
 A zero-config build tool for bootstrapping TypeScript libraries and CLIs. A modern TSDX replacement.
 

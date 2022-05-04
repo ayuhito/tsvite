@@ -1,7 +1,13 @@
 {
   /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
-  "include": ["src/**/*.ts", "src/**/*.json"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.json",
+    "tests/**/*.ts",
+    "tests/**/*.json"
+  ],
+  "exclude": [".eslintrc.js"],
   "compilerOptions": {
     /* Projects */
     "incremental": true,
