@@ -14,12 +14,12 @@
 
     /* Language and Environment */
     // Node 12.9.0 or newer
-    "target": "es2019",
+    "target": "es2020",
     "lib": ["es2020"],
     "useDefineForClassFields": true,
 
     /* Modules */
-    "module": "commonjs",
+    "module": "es2020",
     "moduleResolution": "node",
     "resolveJsonModule": true,
 

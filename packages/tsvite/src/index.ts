@@ -1,4 +1,4 @@
-import cac from "cac";
+import { cac } from "cac";
 
 import { version } from "../package.json";
 import commands from "./commands";
@@ -21,6 +21,8 @@ cli
     console.log(options);
     commands.run(options);
   });
+
+console.log("HELLO");
 
 cli.help();
 cli.version(version);

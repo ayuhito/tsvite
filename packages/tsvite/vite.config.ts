@@ -37,11 +37,11 @@ module.exports = defineConfig({
       // Externalise deps that shouldn't be rolled up
       // builtinModules does not account for node: prefixes and dependencies
       // TODO: make it automatically handle directories such as vite-node/server but also work with named modules like @package/name
-      // Can't just use a split("/") because it will affect packages with @package/name
+      // Can't just use a split("/") because it will affect scoped packages @package/name
       external: (id) => id.startsWith("node:") || EXTERNAL_MODULES.includes(id),
       input: resolve(__dirname, "src/index.ts"),
     },
-    target: "node12",
+    target: "node14",
     sourcemap: true,
     // watch: {},
   },
