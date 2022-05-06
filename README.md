@@ -1,6 +1,8 @@
 # tsvite - WIP
 
-A zero-config build tool for bootstrapping TypeScript libraries and CLIs. A modern TSDX replacement.
+A reasonable build tool for bootstrapping TypeScript libraries and CLIs. A modern TSDX replacement.
+
+Setting up a brand new TypeScript library takes hours tinkering with all sorts of configurations and defaults that also has to exported as an ESM or CJS bundle. This project sets up developers with reasonable defaults with a few included DX improvements.
 
 ---
 
@@ -18,4 +20,5 @@ A zero-config build tool for bootstrapping TypeScript libraries and CLIs. A mode
 npm install -g tsvite
 npx tsvite create mylib
 cd mylib
+npm install # or another package manager of your choice yarn/pnpm
 ```

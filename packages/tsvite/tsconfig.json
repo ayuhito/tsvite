@@ -36,6 +36,7 @@
 
     /* Type Checking */
     "strict": true,
+    // "isolatedModules": true, // Uncomment if you're running into an esbuild transform error
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
@@ -44,6 +45,5 @@
     /* Completeness */
     "skipLibCheck": true // Skip type checking all .d.ts files.
   },
-  "references": [{ "path": "./tsconfig.node.json" }],
   "$schema": "https://json.schemastore.org/tsconfig"
 }

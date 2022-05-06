@@ -36,19 +36,20 @@ export const run = async (options: CliOptions = {}) => {
   // provide the vite define variable in this context
   await runner.executeId("/@vite/env");
 
+  // eslint-disable-next-line no-await-in-loop
   for (const file of files) await runner.executeFile(file);
 
   if (!options.watch) await server.close();
 
   server.watcher.on("change", async (eventName, path) => {
-    // eslint-disable-next-line no-console
     console.log(pc.dim(`[${eventName}] ${path}`));
 
     // invalidate module cache but not node_modules
-    [...runner.moduleCache.keys()].forEach((i) => {
+    for (const i of runner.moduleCache.keys()) {
       if (!i.includes("node_modules")) runner.moduleCache.delete(i);
-    });
+    }
 
+    // eslint-disable-next-line no-await-in-loop
     for (const file of files) await runner.executeFile(file);
   });
 };
